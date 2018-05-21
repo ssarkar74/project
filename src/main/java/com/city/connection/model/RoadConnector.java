@@ -10,13 +10,6 @@ public class RoadConnector {
 	private LinkedList<City> edge[];
 	private HashSet<City> connected;
 	
-	public HashSet<City> getConnected() {
-		return connected;
-	}
-
-	public void setConnected(HashSet<City> connected) {
-		this.connected = connected;
-	}
 
 	public RoadConnector(int numberOfCities) {
 		this.numberOfCities = numberOfCities;
@@ -25,6 +18,14 @@ public class RoadConnector {
 			this.edge[i] = new LinkedList<City>();
 		}
 		connected = new HashSet<City>();
+	}
+	
+	public HashSet<City> getConnected() {
+		return connected;
+	}
+
+	public void setConnected(HashSet<City> connected) {
+		this.connected = connected;
 	}
 	
 	public void addEdge(City origin, City destination) {

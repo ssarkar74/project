@@ -42,7 +42,7 @@ public class RoadController {
 			connected = STRING_NO;
 		}
 		else {
-			connected = aggregator.isConnected(origin.trim().toUpperCase(), destination.trim().toUpperCase()) ? STRING_YES : STRING_NO;
+			connected = aggregator.isConnected(origin.trim(), destination.trim()) ? STRING_YES : STRING_NO;
 		}
     	model.addAttribute("result", connected);
     	return INDEX_PAGE;
